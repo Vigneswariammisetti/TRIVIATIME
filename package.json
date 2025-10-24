@@ -6,7 +6,7 @@
   "scripts": {
     "start": "vite",
     "build": "vite build",
-    "dev": "vite"
+  "dev": "vite --host"
   },
   "dependencies": {
     "firebase": "^10.14.1"

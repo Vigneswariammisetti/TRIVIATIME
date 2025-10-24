@@ -15,18 +15,34 @@ TriviaTime is a multiplayer gaming platform where users can create and host thei
 - Backend: Firebase (Authentication, Firestore, Realtime Database)
 - Hosting: Vercel/Netlify
 
-## Getting Started
+
+
+## Recommended: Run with Docker
+1. Build and run with Docker Compose:
+	```
+	docker compose up --build
+	```
+2. Open [http://localhost:5173](http://localhost:5173) in your browser.
+3. All development and testing can be done inside Docker. Code changes are reflected live if you use the provided volume mount.
+
+## (Optional) Local Development
+If you prefer, you can still run locally:
 1. Install dependencies: `npm install`
 2. Start development server: `npm run dev`
 3. Build for production: `npm run build`
 
+## Troubleshooting
+- If you cannot access the app in Docker, make sure Vite runs with `--host` and port 5173 is exposed.
+- For network issues during build, check your internet connection or proxy settings.
+- For Firebase errors, ensure your Firebase config and Firestore rules are correct.
+
 ## Project Structure
 - `src/` - Application source code
 - `public/` - Static assets
-- `.github/` - Copilot instructions
 
 ## Deployment
-Deploy to Vercel, Netlify, or Firebase Hosting.
+- Deploy to Vercel, Netlify, or Firebase Hosting.
+- For Docker, use a production build and serve with a static server (e.g., `serve` or Nginx) for best performance.
 
 ---
 
